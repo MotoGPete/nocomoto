@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+.box-1 {
+ background-image: url(images/nocomotologolg.jpg);
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
