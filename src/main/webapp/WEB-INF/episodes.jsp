@@ -22,11 +22,11 @@
 			<img src='images/IMG-0963.jpg' style="width:auto;height:410px;" />
 			<h4>Episodes</h4>
 		</div>
-		<div class="container mt-3 text-center">
-		<ul>
+		
+		<ul style="list-style: none;">
 		<c:forEach var="eachepisode" items="${episodes}">
 							<li>
-								<a href="/episodes/${eachepisode.id}">${eachepisode.title}</a>
+								<a href="/episodes/${eachepisode.id}">Episode ${eachepisode.episode_number}: ${eachepisode.title}</a>
 								
 							
 								
@@ -39,7 +39,7 @@
 			
 			
 		
-		</div>
+		
 	</div>
 </body>
 </html>

@@ -13,23 +13,32 @@
 	crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>idea show</title>
+<title>episode show</title>
 </head>
 <body>
-	${episode.comments}
+	<div
+		class="has-bg-image container  text-center  ">
+
+		<h2>Episode ${episode.episode_number}</h2>
+		<h3>${episode.title}</h3>
+		<p>${episode.description}
+	</div>
+	<div class="container text-left border border-dark rounded">
+		<h5>Episode Forum</h5>
+
+		<ul>
+			<c:forEach var="eachcomment" items="${episode.comments}">
+				<li><c:if test="${user_id == eachcomment.user.id}"><a href="/comment/edit/${episode.id}">Edit </a></c:if>${eachcomment.user.userName}  Commented:
+					${eachcomment.content}</li>
+			</c:forEach>
+		</ul>
+		<a class="btn" href="/comment/new/${episode.id}">Create a Comment</a>
+	</div>
+	<div class="container text-center mt-5" id='buzzsprout-large-player'>
+		<script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/147064.js?container_id=buzzsprout-large-player&player=large'></script>
+	</div>
 	
-	
-			<div class="has-bg-image container-sm w-35 text-center ">
-			<img class="bg-img" src="/images/full throttle 1.jpg"/>
-			<h2>Episode ${episode.episode_number}</h2>
-				<h3>${episode.title}</h3>
-				<p>${episode.description}
-				<h5>Comments</h5>
-				<c:forEach var="eachcomment" items="${episode.comments}">
-			${eachcomment.content}
-				</c:forEach>
-				<a class="btn" href="/comment/new/${episode.id}">Create a Comment</a>
-		   </div>
+
 </body>
 </html>
 

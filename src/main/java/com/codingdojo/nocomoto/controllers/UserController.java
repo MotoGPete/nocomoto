@@ -51,7 +51,7 @@ public class UserController {
 			return "index.jsp";
 		}
 		session.setAttribute("user_id", newUser.getId());
-		return "redirect:/home";
+		return "redirect:/";
 	}
 
 	@PostMapping("/login")

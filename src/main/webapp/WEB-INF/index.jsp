@@ -16,11 +16,11 @@
 
 </head>
 <body>
-	<div class="container w-25">
-		<div class="container">
-			<img src='images/nocomotologolg.jpg' style="width:auto;height:410px;" />
+	<div class="container">
+		<div class="container text-center ">
+			<img  src='images/nocomotologolg.jpg' style="width:auto;height:410px;" />
 		</div>
-		<div class="container mt-3 "
+		<div class="container"
 			>
 			<div>
 			<form:form action="/register" method="post" modelAttribute="newUser">

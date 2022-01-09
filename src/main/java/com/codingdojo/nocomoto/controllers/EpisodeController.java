@@ -22,6 +22,7 @@ import com.codingdojo.nocomoto.services.EpisodeService;
 
 
 
+
 @Controller
 public class EpisodeController {
 
@@ -65,7 +66,7 @@ public class EpisodeController {
 			return "episodesNew.jsp";
 		} else {
 			commentService.createComment(newComment);
-			return "redirect:/episodes";
+			return "redirect:/episodes/{id}";
 		}
 
 	}
@@ -94,22 +95,25 @@ public class EpisodeController {
 //	}
 //
 //	// **************update*****************
-//	@GetMapping("/episodes/{id}/edit")
-//	public String episodesEdit(@PathVariable("id") Long id, Model model) {
-//		Episode episode = episodeService.findEpisode(id);
-//		model.addAttribute("episode", episode);
-//		return "episodesEdit.jsp";
-//	}
-//
-//	@PutMapping("ideas/{id}/edit")
-//	public String processEditForm(@Valid @ModelAttribute("newEpisode") Episode newEpisode, BindingResult result,
-//			@PathVariable("id") Long id) {
-//		if (result.hasErrors()) {
-//			return "ideasEdit.jsp";
-//		} else {
-//			episodeService.createEpisode(newEpisode);
-//			return "redirect:/episodes";
-//		}
-//
-//	}
+	@GetMapping("/comment/edit/{id}")
+	public String episodesEdit(@PathVariable("id") Long id, Model model) {
+		Comment comment = commentService.findComment(id);
+		model.addAttribute("newComment", comment);
+		return "commentsEdit.jsp";
+	}
+	
+	
+
+	
+	@PutMapping("/comment/edit/{id}")
+	public String processEditForm(@Valid @ModelAttribute("newComment") Comment newComment, BindingResult result,
+			@PathVariable("id") Long id) {
+		if (result.hasErrors()) {
+			return "commentsEdit.jsp";
+		} else {
+			commentService.createComment(newComment);
+			return "redirect:/episodes{id}";
+		}
+
+	}
 }

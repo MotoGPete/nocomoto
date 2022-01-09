@@ -6,13 +6,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>comment new</title>
+<title>comment edit</title>
 </head>
 <body>
 	<div class="container">
-		<form:form action="/comment/new/${episode.id}" method="post"
+		<form:form action="/comment/edit/${episode.id}" method="post"
 			modelAttribute="newComment" class="form">
-			
+			<input type="hidden" name="_method" value="put" />
 			<form:label path="content" class="form-label">comment here:</form:label>
 			<form:input path="content" type="textarea" class="form-control" />
 			<form:errors path="content" class="text-danger" />
@@ -20,7 +20,7 @@
 
 
 			<form:input type="hidden" path="user" value="${user_id}" />
-			<form:input type="hidden" path="episode" value="${episode.id}"/>
+			<form:input type="hidden" path="episode" value="${episode.id}" />
 
 			<button class="btn btn-primary">Create</button>
 		</form:form>
