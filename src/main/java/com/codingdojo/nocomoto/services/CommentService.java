@@ -1,5 +1,8 @@
 package com.codingdojo.nocomoto.services;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Date;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +22,11 @@ public class CommentService {
 		return commentRepository.save(comment);
 	}
 	
+	//deletes
+	public void deleteComment(Long id) {
+		commentRepository.deleteById(id);	
+	}
+	
 	public Comment findComment(Long id) {
 		Optional<Comment> optionalComment = commentRepository.findById(id);
 		if(optionalComment.isPresent()) {
@@ -26,5 +34,12 @@ public class CommentService {
      } else {
          return null;
      	}
+	}
+	
+	public Period findPeriod(LocalDate date) {
+		LocalDate today = LocalDate.now();
+		Period p = Period.between(date, today);
+		return p; 
+		                 
 	}
 }

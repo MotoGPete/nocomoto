@@ -9,15 +9,15 @@
 <title>comment new</title>
 </head>
 <body>
-	<div class="container">
+	<div class="container width-auto">
 		<form:form action="/comment/new/${episode.id}" method="post"
 			modelAttribute="newComment" class="form">
 			
 			<form:label path="content" class="form-label">comment here:</form:label>
 			<form:input path="content" type="textarea" class="form-control" />
 			<form:errors path="content" class="text-danger" />
-
-
+			<form:input path="href" type="text" class="form-control"/>
+			<form:input path="label" type="text" class="form-control"/>
 
 			<form:input type="hidden" path="user" value="${user_id}" />
 			<form:input type="hidden" path="episode" value="${episode.id}"/>

@@ -1,5 +1,7 @@
 package com.codingdojo.nocomoto.controllers;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -7,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +28,8 @@ import com.codingdojo.nocomoto.services.EpisodeService;
 
 @Controller
 public class EpisodeController {
+	
+	private static DateTimeFormatter myFormatPublishedAt = DateTimeFormatter.ofPattern("MMM dd yyyy");
 
 	@Autowired
 	EpisodeService episodeService;
@@ -34,7 +39,8 @@ public class EpisodeController {
 	// **************Show All****************
 	@GetMapping("/episodes")
 	public String dashboard(Model model, HttpSession session) {
-		List<Episode> episodes = episodeService.allEpisodes();
+//		List<Episode> episodes = episodeService.allEpisodes();
+		List<Episode> episodes = episodeService.findDescendingEpisodes();
 		model.addAttribute("episodes", episodes);
 		return "episodes.jsp";
 	}
@@ -43,8 +49,11 @@ public class EpisodeController {
 	public String episodeShow(@PathVariable("id") Long id, Model model, HttpSession session) {
 		Episode episode = episodeService.findEpisode(id);
 		model.addAttribute("episode", episode);
+//		LocalDateTime publishedAt = episode.published_at;
 		
-		return "episodeShow.jsp";
+//		String formattedDate = publishedAt.format(myFormatPublishedAt);
+//		model.addAttribute("formattedEpisodeDate",formattedDate);
+		return "episodeShow.jsp"; 
 	}
 //*********************Create Comment************************
 	@GetMapping("/comment/new/{id}")
@@ -116,4 +125,12 @@ public class EpisodeController {
 		}
 
 	}
+	
+	// *****************delete********************
+		@DeleteMapping("/comment/delete/{id}/{episodeId}")
+		public String processDeleteComment(@PathVariable("id") Long id, @PathVariable("episodeId") Long episodeId) {
+			commentService.deleteComment(id);
+			return "redirect:/episodes/{episodeId}";
+		}
+	
 }

@@ -1,5 +1,6 @@
 package com.codingdojo.nocomoto.models;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
@@ -28,7 +29,9 @@ public class Episode {
 	private String summary;
 	private String artist;
 	private String tags;
-	private String published_at;
+//	@DateTimeFormat(pattern="yyyy-MM-dd")
+//	public LocalDateTime published_at;
+	public String published_at;
 	private Integer duration;
 	private Integer episode_number;
 	private Integer total_plays;
@@ -103,6 +106,17 @@ public class Episode {
 	public void setTags(String tags) {
 		this.tags = tags;
 	}
+	
+
+//	public LocalDateTime getPublished_at() {
+//		return published_at;
+//	}
+//	public void setPublished_at(LocalDateTime published_at) {
+//		this.published_at = published_at;
+//	}
+
+
+	
 	public String getPublished_at() {
 		return published_at;
 	}
