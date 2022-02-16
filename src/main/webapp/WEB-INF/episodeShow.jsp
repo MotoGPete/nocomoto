@@ -39,6 +39,7 @@
 			<script type='text/javascript' charset='utf-8'
 				src='https://www.buzzsprout.com/147064.js?container_id=buzzsprout-large-player&player=large'></script>
 		</div>
+		<a class="btn" href="/episodes">back</a>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">

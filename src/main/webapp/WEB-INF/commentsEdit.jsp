@@ -5,6 +5,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" type="text/css"
+	href="/resources/static/css/commentsEditStyle.css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<meta charset="ISO-8859-1">
 <meta charset="ISO-8859-1">
 <title>comment edit</title>
 </head>
@@ -23,8 +32,9 @@
 			<form:input type="hidden" path="episode" value="${episode.id}" />
 
 			<button class="btn btn-primary">Create</button>
+			<a class="btn" href="/episodes/${episode.id}">back</a>
 		</form:form>
-
+			
 	</div>
 
 </body>

@@ -6,6 +6,6 @@
 .background {
 	background: url("/resources/static/img/tumblr_osxaetFVh91tt323xo3_1280.jpg");
 	background-repeat: no-repeat;
-	background-size: auto;
+	background-size: 100% auto;
 }
 
