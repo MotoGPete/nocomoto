@@ -1,0 +1,11 @@
+@charset "ISO-8859-1";
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+
+
+.background {
+	background: url("/resources/static/img/tumblr_osxaetFVh91tt323xo3_1280.jpg");
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+

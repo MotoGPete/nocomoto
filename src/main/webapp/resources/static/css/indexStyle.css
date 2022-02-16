@@ -1,6 +1,6 @@
-.body {
+body {
     padding-top: 90px;
-     background-image: url("/nocomoto/src/main/webapp/images/fullthrottle1.jpg");
+     background-color: #FE6800;
 
 }
 .panel-login {

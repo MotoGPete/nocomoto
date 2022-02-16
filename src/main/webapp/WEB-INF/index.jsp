@@ -10,7 +10,7 @@
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
 <link rel="stylesheet" type="text/css"
-	href="/nocomoto/src/main/resources/static/css/style.css">
+	href="/resources/static/css/indexStyle.css">
 <script
 	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -27,10 +27,10 @@
 
 	<div class="container" style="height: 20px; width: auto"></div>
 	<div class="container text-center" style="width:auto">
-		<img class="img-fluid" src='images/nocomotologolg.jpg'
+		<img class="img-fluid" src='/resources/static/img/noco mot logo lg.jpg'
 			style="width: 50%; height: auto; border-radius: 10%" />
 	</div>
-	<div class="container">
+	<div class="container mt-5">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-login">
