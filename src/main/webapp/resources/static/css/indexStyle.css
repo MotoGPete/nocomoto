@@ -1,18 +1,19 @@
 body {
     padding-top: 90px;
-     background-color: #FE6800;
+    background-color: #CD6001;
 
 }
 .panel-login {
-	border-color: #ccc;
-	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	border-color: #CD6001;
+	/*-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);*/
 }
 .panel-login>.panel-heading {
+	
 	color: #00415d;
-	background-color: #fff;
-	border-color: #fff;
+	background-color: #CD6001;
+	/*border-color: #CD6001;*/
 	text-align:center;
 }
 .panel-login>.panel-heading a{
@@ -25,11 +26,10 @@ body {
 	transition: all 0.1s linear;
 }
 .panel-login>.panel-heading a.active{
-	color: #029f5b;
+	color: #CD6001;
 	font-size: 18px;
 }
 .panel-login>.panel-heading hr{
-	margin-top: 10px;
 	margin-bottom: 0px;
 	clear: both;
 	border: 0;
@@ -41,7 +41,7 @@ body {
 }
 .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
 	height: 45px;
-	border: 1px solid #ddd;
+	border: 1px solid #CD6001;
 	font-size: 16px;
 	-webkit-transition: all 0.1s linear;
 	-moz-transition: all 0.1s linear;
