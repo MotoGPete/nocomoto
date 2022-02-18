@@ -19,7 +19,7 @@
 <body>
 	<div class="background">
 		<div class="container p-5 text-center">
-			<h5>${userName}Is Fighting the Dragon</h5>
+			<h5>${userName} Is Fighting the Dragon</h5>
 			<h4>
 				<a class="btn btn-primary" href="/logout">Logout</a>
 			</h4>
@@ -48,6 +48,9 @@
 
 		</div>
 	</div>
+	<footer>
+          <a href="https://www.etsy.com/shop/TempusDeficit?ref=simple-shop-header-name&listing_id=656222483" target="_blank" rel="noopener noreferrer">Support the Artist</a></p>
+        </footer>
 </body>
 </html>
 

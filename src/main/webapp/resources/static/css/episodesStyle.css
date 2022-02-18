@@ -42,3 +42,7 @@
 .table-borderless th {
     border: 0;
 }
+footer {
+text-align: center;
+background: rgba(0, 0, 0, 0.0)
+}

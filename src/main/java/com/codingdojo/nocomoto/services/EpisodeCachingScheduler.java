@@ -1,6 +1,6 @@
 package com.codingdojo.nocomoto.services;
 
-import java.net.http.HttpClient;
+//import java.net.http.HttpClient;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,7 +34,7 @@ public class EpisodeCachingScheduler {
     	this.episodeRepository = episodeRepository;
     }
 	
-	@Scheduled(cron = "0 0 0 * * *")
+	@Scheduled(cron = "0 * * * * *")
 	public void updateEpisodeDetails() {
 		List<Episode> episodePayload = getEpisodesFromBuzzsprout();
 		episodePayload.forEach(episode -> episodeRepository.save(episode));

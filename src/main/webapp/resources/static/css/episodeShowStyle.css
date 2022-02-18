@@ -17,4 +17,8 @@
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 }
+footer {
+text-align: center;
+background: rgba(0, 0, 0, 0.0)
+}
 

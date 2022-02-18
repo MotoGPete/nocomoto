@@ -3,14 +3,8 @@ package com.codingdojo.nocomoto.models;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -25,7 +19,11 @@ public class Episode {
 	private String title;
 	private String audio_url;
 	private String artwork_url;
+	@Lob
+	@Column(length = 10000)
 	private String description;
+	@Lob
+	@Column(length = 10000)
 	private String summary;
 	private String artist;
 	private String tags;
