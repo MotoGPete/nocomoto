@@ -28,6 +28,7 @@
 </head>
 <body class="container">
 	<div class="background">
+	<a class="btn" href="/episodes">back</a>
 		<div class="container text-center mt-5 font">
 
 			<h2 class="font">Episode ${episode.episode_number}
@@ -39,7 +40,7 @@
 			<script type='text/javascript' charset='utf-8'
 				src='https://www.buzzsprout.com/147064.js?container_id=buzzsprout-large-player&player=large'></script>
 		</div>
-		<a class="btn" href="/episodes">back</a>
+
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
@@ -125,8 +126,8 @@
 
 
 <footer>
-      <a href="https://www.etsy.com/shop/TempusDeficit?ref=simple-shop-header-name&listing_id=656222483" target="_blank" rel="noopener noreferrer">Support the Artist</a></p>
-    </footer>
+              <a href="https://www.etsy.com/shop/TempusDeficit?ref=simple-shop-header-name&listing_id=656222483" target="_blank" rel="noopener noreferrer">Art by TempusDeficit</a>
+            </footer>
 </body>
 </html>
 

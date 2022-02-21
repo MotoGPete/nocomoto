@@ -14,12 +14,14 @@
 .font {
 	font-family: NexaRust;
 }
+body {background-color: rgba(149,210,229,255);}
+
 
 .background {
 	background: url("/resources/static/img/il_794xN.2348104648_7r0h.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	height: 1500px;
+	height: 1800px;
 	font-family: NexaRust;
 }
 
@@ -44,5 +46,5 @@
 }
 footer {
 text-align: center;
-background: rgba(0, 0, 0, 0.0)
+
 }

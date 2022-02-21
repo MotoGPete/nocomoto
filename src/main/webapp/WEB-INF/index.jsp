@@ -117,8 +117,8 @@
 		</div>
 	</div>
 <footer>
-      <a href="https://www.etsy.com/shop/TempusDeficit?ref=simple-shop-header-name&listing_id=656222483" target="_blank" rel="noopener noreferrer">Support the Artist</a></p>
-    </footer>
+              <a href="https://www.etsy.com/shop/TempusDeficit?ref=simple-shop-header-name&listing_id=656222483" target="_blank" rel="noopener noreferrer">Art by TempusDeficit</a>
+            </footer>
 	</body>
 </html>
 
