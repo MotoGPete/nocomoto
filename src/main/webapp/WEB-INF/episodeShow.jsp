@@ -68,7 +68,7 @@ $('#submitForm').submit(function(e) {
 	<a class="btn" href="/episodes">back</a>
 		<div class="container text-center mt-5 font">
 
-			<h2 class="font">Episode ${episode.episode_number}
+			<h2 class="font">Episode ${episode.episode_number}${episode.id}
 				${formattedEpisodeDate}</h2>
 			<h3>${episode.title}</h3>
 			<p>${episode.description}
@@ -83,8 +83,8 @@ $('#submitForm').submit(function(e) {
 				<div class="page-header">
 					<form id="submitForm" action="/saveComment" method="post">
 						&nbsp; 
-						<input type="hidden" name="userId" value="${user_id}" /> 
-						<input type="hidden" name="episodeId" value="${episode.id}" /> 
+						<input type="hidden" name="user_id" value="${user_id}" /> 
+						<input type="hidden" name="episode_id" value="${episode.id}" /> 
 						<label>Comment</label>
 						<input name="content" type="text"> 
 						<label>link</label> 

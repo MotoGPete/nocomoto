@@ -4,6 +4,9 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
@@ -12,6 +15,9 @@ import javax.persistence.PreUpdate;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class CommentForm {
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 //	@ManyToOne(fetch = FetchType.LAZY)
 //	@MapsId("userId")
 //	@JoinColumn(name = "user_id")
@@ -39,6 +45,14 @@ public class CommentForm {
 //		this.updatedAt = new Date();
 //	}
 	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public String getContent() {
 		return content;
 	}
