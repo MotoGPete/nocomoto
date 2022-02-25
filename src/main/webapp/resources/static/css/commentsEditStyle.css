@@ -1,0 +1,12 @@
+
+@charset "ISO-8859-1";
+.background {
+	background: url("/resources/static/img/tumblr_osxaetFVh91tt323xo7_1280.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	height: 1500px;
+}
+
+.form {
+	margin-top: 10;
+}

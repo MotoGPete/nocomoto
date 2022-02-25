@@ -1,0 +1,50 @@
+@charset "ISO-8859-1";
+
+@charset "ISO-8859-1";
+
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+@font-face {
+	font-family: NexaRust;
+	font-weight: bold;
+	src: url("/resources/static/fonts/NexaRustSlab-BlackShadow01.otf")
+		format("opentype");
+}
+
+.font {
+	font-family: NexaRust;
+}
+body {background-color: rgba(149,210,229,255);}
+
+
+.background {
+	background: url("/resources/static/img/il_794xN.2348104648_7r0h.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	height: 1800px;
+	font-family: NexaRust;
+}
+
+.my-custom-scrollbar {
+	border: none;
+	text-align: center;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	height: 600px;
+	overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+	display: block;
+}
+
+.table-borderless td,
+.table-borderless th {
+    border: 0;
+}
+footer {
+text-align: center;
+
+}

@@ -1,0 +1,49 @@
+@charset "ISO-8859-1";
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+@font-face {
+	font-family: NexaRust;
+	font-weight: bold;
+	src: url("/resources/static/fonts/NexaRustSlab-BlackShadow01.otf")
+		format("opentype");
+}
+
+.pagefont{
+font-family: 'Anton', sans-serif;
+}
+
+.font {
+	font-family: NexaRust;
+}
+
+.background {
+	background: url("/resources/static/img/tumblr_osxaetFVh91tt323xo3_1280.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+
+}
+footer {
+text-align: center;
+background: rgba(0, 0, 0, 0.0)
+}
+
+a {
+color: black;
+}
+
+
+
+.epdescription {
+	
+	height: auto;
+	width: 100%;
+}
+
+#buzzsprout-large-player {
+    display: none;
+}
+
+#commentBox {
+    display: none;
+}
+

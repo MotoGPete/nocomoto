@@ -1,17 +1,24 @@
 package com.codingdojo.nocomoto.controllers;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.codingdojo.nocomoto.models.Comment;
 import com.codingdojo.nocomoto.models.Episode;
@@ -22,8 +29,11 @@ import com.codingdojo.nocomoto.services.EpisodeService;
 
 
 
+
 @Controller
 public class EpisodeController {
+	
+	private static DateTimeFormatter myFormatPublishedAt = DateTimeFormatter.ofPattern("MMM dd yyyy");
 
 	@Autowired
 	EpisodeService episodeService;
@@ -33,7 +43,8 @@ public class EpisodeController {
 	// **************Show All****************
 	@GetMapping("/episodes")
 	public String dashboard(Model model, HttpSession session) {
-		List<Episode> episodes = episodeService.allEpisodes();
+//		List<Episode> episodes = episodeService.allEpisodes();
+		List<Episode> episodes = episodeService.findDescendingEpisodes();
 		model.addAttribute("episodes", episodes);
 		return "episodes.jsp";
 	}
@@ -42,8 +53,13 @@ public class EpisodeController {
 	public String episodeShow(@PathVariable("id") Long id, Model model, HttpSession session) {
 		Episode episode = episodeService.findEpisode(id);
 		model.addAttribute("episode", episode);
+		Comment comment = new Comment();
+		model.addAttribute("newComment", comment);
+//		LocalDateTime publishedAt = episode.published_at;
 		
-		return "episodeShow.jsp";
+//		String formattedDate = publishedAt.format(myFormatPublishedAt);
+//		model.addAttribute("formattedEpisodeDate",formattedDate);
+		return "episodeShow.jsp"; 
 	}
 //*********************Create Comment************************
 	@GetMapping("/comment/new/{id}")
@@ -58,6 +74,7 @@ public class EpisodeController {
 		return "commentNew.jsp";
 	}
 	
+
 	@PostMapping("/comment/new/{id}")
 	public String processCreateEpisode(@Valid @ModelAttribute("newComment") Comment newComment, BindingResult result,
 			HttpSession session, @PathVariable("id") Long id) {
@@ -65,10 +82,27 @@ public class EpisodeController {
 			return "episodesNew.jsp";
 		} else {
 			commentService.createComment(newComment);
-			return "redirect:/episodes";
+			return "redirect:/episodes/{id}";
 		}
 
 	}
+	
+	
+//	@PostMapping("/saveComment")
+//	public void saveComment(@RequestBody Comment newComment) {
+//		   commentService.createComment(newComment);
+//			
+//		
+//	   }
+	
+//	   @RequestMapping(value = "saveComment", method = RequestMethod.POST)
+//	   public ResponseEntity<String> saveComment(@RequestBody Comment newComment) {
+//		   commentService.createComment(newComment);
+//		    return ResponseEntity.ok("Hello World!");
+//
+//		
+//	   }
+	
 //	// **********create***************
 //	@GetMapping("/episodes/new")
 //	public String createEpisode(Model model, HttpSession session) {
@@ -94,22 +128,33 @@ public class EpisodeController {
 //	}
 //
 //	// **************update*****************
-//	@GetMapping("/episodes/{id}/edit")
-//	public String episodesEdit(@PathVariable("id") Long id, Model model) {
-//		Episode episode = episodeService.findEpisode(id);
-//		model.addAttribute("episode", episode);
-//		return "episodesEdit.jsp";
-//	}
-//
-//	@PutMapping("ideas/{id}/edit")
-//	public String processEditForm(@Valid @ModelAttribute("newEpisode") Episode newEpisode, BindingResult result,
-//			@PathVariable("id") Long id) {
-//		if (result.hasErrors()) {
-//			return "ideasEdit.jsp";
-//		} else {
-//			episodeService.createEpisode(newEpisode);
-//			return "redirect:/episodes";
-//		}
-//
-//	}
+	@GetMapping("/comment/edit/{id}")
+	public String episodesEdit(@PathVariable("id") Long id, Model model) {
+		Comment comment = commentService.findComment(id);
+		model.addAttribute("newComment", comment);
+		return "commentsEdit.jsp";
+	}
+	
+	
+
+	
+	@PutMapping("/comment/edit/{id}")
+	public String processEditForm(@Valid @ModelAttribute("newComment") Comment newComment, BindingResult result,
+			@PathVariable("id") Long id) {
+		if (result.hasErrors()) {
+			return "commentsEdit.jsp";
+		} else {
+			commentService.createComment(newComment);
+			return "redirect:/episodes{id}";
+		}
+
+	}
+	
+	// *****************delete********************
+		@DeleteMapping("/comment/delete/{id}/{episodeId}")
+		public String processDeleteComment(@PathVariable("id") Long id, @PathVariable("episodeId") Long episodeId) {
+			commentService.deleteComment(id);
+			return "redirect:/episodes/{episodeId}";
+		}
+	
 }

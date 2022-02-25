@@ -1,5 +1,6 @@
 package com.codingdojo.nocomoto.models;
 
+import java.time.LocalDate;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -66,7 +67,25 @@ public class Comment {
 	
 	private String content;
 
+	private String href;
 	
+	private String label;
+
+	public String getHref() {
+		return href;
+	}
+
+	public void setHref(String href) {
+		this.href = href;
+	}
+
+	public String getLabel() {
+		return label;
+	}
+
+	public void setLabel(String label) {
+		this.label = label;
+	}
 
 	public Long getId() {
 		return id;
@@ -91,6 +110,8 @@ public class Comment {
 	public void setEpisode(Episode episode) {
 		this.episode = episode;
 	}
+
+
 
 	public Date getCreatedAt() {
 		return createdAt;

@@ -25,6 +25,11 @@ public class EpisodeService {
 		public List<Episode> allEpisodes() {
 			return episodeRepository.findAll();
 		}
+		
+		public List<Episode> findDescendingEpisodes(){
+			return episodeRepository.descendingEpisodes();
+		}
+		
 		// creates
 		
 		public Episode createEpisode(Episode episode) {
