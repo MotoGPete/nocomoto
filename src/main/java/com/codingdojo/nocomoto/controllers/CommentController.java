@@ -28,7 +28,7 @@ public class CommentController {
 	UserService userService;
 	
 	@RequestMapping(value = "/saveComment", method = RequestMethod.POST, consumes="application/json")
-	   public ResponseEntity<String> saveComment(@RequestBody CommentForm newCommentForm) {
+	   public String saveComment(@RequestBody CommentForm newCommentForm) {
 		Comment newComment = new Comment();
 		newComment.setContent(newCommentForm.getContent());
 		newComment.setLabel(newCommentForm.getLabel());
@@ -37,7 +37,7 @@ public class CommentController {
 		newComment.setUser(userService.findUser(newCommentForm.getUser_id()));
 		commentService.createComment(newComment);
 		   
-		    return ResponseEntity.ok("Hello World!");
+		    return "episodeShow.jsp";
 
 		
 	   }

@@ -8,6 +8,10 @@
 		format("opentype");
 }
 
+.pagefont{
+font-family: 'Anton', sans-serif;
+}
+
 .font {
 	font-family: NexaRust;
 }
@@ -22,3 +26,20 @@ text-align: center;
 background: rgba(0, 0, 0, 0.0)
 }
 
+
+
+
+
+.epdescription {
+	
+	height: auto;
+	width: 100%;
+}
+
+#buzzsprout-large-player {
+    display: none;
+}
+
+#commentBox {
+    display: none;
+}
