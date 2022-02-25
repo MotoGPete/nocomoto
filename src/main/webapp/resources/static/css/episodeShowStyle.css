@@ -20,13 +20,16 @@ font-family: 'Anton', sans-serif;
 	background: url("/resources/static/img/tumblr_osxaetFVh91tt323xo3_1280.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% auto;
+
 }
 footer {
 text-align: center;
 background: rgba(0, 0, 0, 0.0)
 }
 
-
+a {
+color: black;
+}
 
 
 
@@ -43,3 +46,4 @@ background: rgba(0, 0, 0, 0.0)
 #commentBox {
     display: none;
 }
+
