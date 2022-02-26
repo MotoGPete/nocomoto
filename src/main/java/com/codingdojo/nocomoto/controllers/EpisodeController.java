@@ -2,6 +2,7 @@ package com.codingdojo.nocomoto.controllers;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Collections;
 import java.util.List;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -53,8 +54,9 @@ public class EpisodeController {
 	public String episodeShow(@PathVariable("id") Long id, Model model, HttpSession session) {
 		Episode episode = episodeService.findEpisode(id);
 		model.addAttribute("episode", episode);
-		Comment comment = new Comment();
-		model.addAttribute("newComment", comment);
+		List<Comment> descComments = episode.getComments();
+		Collections.reverse(descComments);
+		model.addAttribute("descComments", descComments);
 //		LocalDateTime publishedAt = episode.published_at;
 		
 //		String formattedDate = publishedAt.format(myFormatPublishedAt);

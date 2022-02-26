@@ -15,4 +15,5 @@ public interface EpisodeRepository extends CrudRepository<Episode, Long>{
 	
 	@Query(value="SELECT * FROM episodes ORDER BY id DESC", nativeQuery=true)
 	List<Episode> descendingEpisodes();
+	
 }
