@@ -49,12 +49,6 @@
 
 	</div>
 
-
-    <footer><h4>
-                                    				<a class="btn btn-primary" href="/logout">Logout</a>
-                                    			</h4>
-                  <a href="https://www.etsy.com/shop/TempusDeficit?ref=simple-shop-header-name&listing_id=656222483" target="_blank" rel="noopener noreferrer">Art by TempusDeficit</a>
-                </footer>
 </body>
 </html>
 

@@ -1,11 +1,15 @@
 @charset "ISO-8859-1";
 .background {
-	background: url("/resources/static/img/tumblr_osxaetFVh91tt323xo7_1280.jpg");
+	background: white;
 	background-repeat: no-repeat;
-	background-size: 100% auto;
-	height: 1500px;
+	margin-top: 50px;
+
 }
 
 .form {
-	margin-top: 10;
+	margin: auto;
+	width: 60%;
+}
+img{
+float: left;
 }

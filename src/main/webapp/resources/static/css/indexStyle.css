@@ -1,8 +1,11 @@
 body {
-    padding-top: 90px;
-    background-color: #CD6001;
 
-}
+     background: url("/resources/static/img/woodpanel.jpg");
+         background-repeat: no-repeat;
+         background-size: cover;
+   }
+
+
 .panel-login {
 	border-color: #CD6001;
 	/*-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
@@ -99,7 +102,4 @@ body {
 	background-color: #1CA347;
 	border-color: #1CA347;
 }
-footer {
-text-align: center;
-background: rgba(0, 0, 0, 0.0)
-}
+

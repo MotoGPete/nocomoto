@@ -50,7 +50,7 @@ public class UserController {
 			model.addAttribute("newLogin", new LoginUser());
 			return "index.jsp";
 		}
-		session.setAttribute("user_id", newUser.getId());
+		session.setAttribute("user_id", newUser.getUserId());
 		return "redirect:/";
 	}
 
@@ -62,7 +62,7 @@ public class UserController {
 			model.addAttribute("newUser", new User());
 			return "index.jsp";
 		}
-		session.setAttribute("user_id", user.getId());
+		session.setAttribute("user_id", user.getUserId());
 		session.setAttribute("userName", user.getUserName());
 		return "redirect:/home";
 	}

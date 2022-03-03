@@ -77,10 +77,11 @@
 		</button>
 		<div class="collapse navbar-collapse pagefont" id="navbarNavDropdown">
 			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="nav-link btn"
-					href="/episodes">Episodes <span class="sr-only">(current)</span>
+				<li class="nav-item"><a class="nav-link" href="/episodes">Episodes <span class="sr-only">(current)</span>
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="/logout">logout</a>
+				<li class="nav-item"><a class="nav-link" href="/profile">Profile</a>
+                				</li>
+				<li class="nav-item"><a class="nav-link" href="/logout">Logout</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" target="_blank"
 					href="https://www.etsy.com/shop/TempusDeficit?ref=simple-shop-header-name&listing_id=682919777">Buy

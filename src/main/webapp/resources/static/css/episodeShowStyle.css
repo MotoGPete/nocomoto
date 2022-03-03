@@ -20,6 +20,7 @@ font-family: 'Anton', sans-serif;
 	background: url("/resources/static/img/tumblr_osxaetFVh91tt323xo3_1280.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% auto;
+
 }
 .background2 {
 	background: url("/resources/static/img/filler.jpg");
@@ -32,10 +33,15 @@ background: rgba(0, 0, 0, 0.0)
 }
 
 
+
 .table {
 	background-color:rgba(192,214,216,0.6);
 	
 	
+
+a {
+color: black;
+n
 }
 
 .my-custom-scrollbar {
@@ -58,5 +64,8 @@ background: rgba(0, 0, 0, 0.0)
 }
 
 
+#commentBox {
+    display: none;
+}
 
 

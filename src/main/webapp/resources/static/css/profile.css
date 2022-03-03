@@ -1,0 +1,49 @@
+@charset "ISO-8859-1";
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+@font-face {
+	font-family: NexaRust;
+	font-weight: bold;
+	src: url("/resources/static/fonts/NexaRustSlab-BlackShadow01.otf")
+		format("opentype");
+}
+.pagefont{
+font-family: 'Anton', sans-serif;
+}
+
+.font {
+	font-family: NexaRust;
+}
+
+
+.sidebar {
+height: 100%;
+width: 200px;
+position: absolute;
+left: 0;
+top: 0;
+padding-top: 75px;
+background-color: lightblue;
+
+}
+p{
+text-align: center;
+}
+
+.sidebar div {
+padding: 8px;
+font-size: 24px;
+display: block;
+}
+
+.body-text {
+margin-left: 150px;
+font-size: 32px;
+
+}
+.list{
+font-size: 32px;
+align: right;
+margin-left: 250px;
+padding-top: 100px;
+}
