@@ -69,6 +69,9 @@
 		style="background-color: #C5DBDE">
 		<a class="navbar-brand font" href="#">Episode
 			${episode.episode_number}</a>
+			<form:form action = "/episodes/${episode.id}" method ="post">
+			<button>Save To Favorites</button>
+			</form:form>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
 			aria-expanded="false" aria-label="Toggle navigation">

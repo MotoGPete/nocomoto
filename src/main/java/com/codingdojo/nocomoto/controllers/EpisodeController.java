@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import com.codingdojo.nocomoto.models.User;
+import com.codingdojo.nocomoto.repositories.UserRepository;
 import com.codingdojo.nocomoto.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -45,7 +46,8 @@ public class EpisodeController {
 	CommentService commentService;
 	@Autowired
 	UserService userService;
-	
+	@Autowired
+	UserRepository userRepository;
 	// **************Show All****************
 	@GetMapping("/episodes")
 	public String dashboard(Model model, HttpSession session) {
@@ -105,6 +107,8 @@ public class EpisodeController {
 		List<Episode> userFave = user.getUserFaves();
 		Episode episode = episodeService.findEpisode(id);
 		userFave.add(episode);
+		user.setUserFaves(userFave);
+		userRepository.save(user);
 		return "redirect:/episodes/{id}";
 	}
 	
