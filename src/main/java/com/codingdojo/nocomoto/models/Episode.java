@@ -1,6 +1,7 @@
 package com.codingdojo.nocomoto.models;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
@@ -52,6 +53,9 @@ public class Episode {
 	
 	@OneToMany(mappedBy = "episode",fetch = FetchType.LAZY)
 	private List<Comment> comments;
+
+	@ManyToMany(mappedBy = "userFaves")
+	private List<User> faveEpisodes = new ArrayList<>();
 		
 		
 	
@@ -104,9 +108,15 @@ public class Episode {
 	public void setTags(String tags) {
 		this.tags = tags;
 	}
-	
 
-//	public LocalDateTime getPublished_at() {
+	public List<User> getFaveEpisodes() {
+		return faveEpisodes;
+	}
+
+	public void setFaveEpisodes(List<User> faveEpisodes) {
+		this.faveEpisodes = faveEpisodes;
+	}
+	//	public LocalDateTime getPublished_at() {
 //		return published_at;
 //	}
 //	public void setPublished_at(LocalDateTime published_at) {

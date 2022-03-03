@@ -3,8 +3,12 @@ package com.codingdojo.nocomoto.controllers;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+
+import com.codingdojo.nocomoto.models.User;
+import com.codingdojo.nocomoto.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -39,6 +43,8 @@ public class EpisodeController {
 	EpisodeService episodeService;
 	@Autowired
 	CommentService commentService;
+	@Autowired
+	UserService userService;
 	
 	// **************Show All****************
 	@GetMapping("/episodes")
@@ -85,6 +91,21 @@ public class EpisodeController {
 			return "redirect:/episodes/{id}";
 		}
 
+	}
+	@PostMapping("/episodes/{id}")
+	public String addFavorite(HttpServletRequest request, @PathVariable("id") Long id, Model model){
+
+		HttpSession session = (request.getSession());
+		if (session.getAttribute("user_id") == null) {
+			return "redirect:/";
+		}
+		//this is the part that isn't working
+		Long userID = (Long) session.getAttribute("user_id");
+		User user = userService.findUser(userID);
+		List<Episode> userFave = user.getUserFaves();
+		Episode episode = episodeService.findEpisode(id);
+		userFave.add(episode);
+		return "redirect:/episodes/{id}";
 	}
 	
 	

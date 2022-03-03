@@ -1,11 +1,10 @@
 body {
-    padding-top: 90px;
+
+     background: url("/resources/static/img/woodpanel.jpg");
+         background-repeat: no-repeat;
+         background-size: cover;
    }
-.background{
-  background: url("/resources/static/img/istockphoto-174864242-170667a.jpg");
-     background-repeat: repeat;
-     background-size: 100% auto;
-}
+
 
 .panel-login {
 	border-color: #CD6001;
