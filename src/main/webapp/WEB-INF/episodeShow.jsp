@@ -57,7 +57,8 @@
 
 <meta charset="UTF-8">
 
-<body class="container background">
+<body class="container background animated fadeInUp" >
+
 	<!-- Toggle button -->
 	<button class="navbar-toggler " type="button"
 		data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
@@ -65,10 +66,10 @@
 		aria-label="Toggle navigation">
 		<i class="fas fa-bars"></i>
 	</button>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light"
+	<nav class="navbar navbar-expand-lg navbar-light bg-light rounded"
 		style="background-color: #C5DBDE">
 		<a class="navbar-brand font" href="#">Episode
-			${episode.episode_number}</a>
+			<c:out value="${episode.episode_number}"></c:out></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
 			aria-expanded="false" aria-label="Toggle navigation">
@@ -92,7 +93,7 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="${episode.audio_url}"
 							target="_blank">Play This episode in another window
-							*recommended </a>
+							 </a>
 						<button id="playerOn" class="dropdown-item"
 							onclick="togglePlayer()">Load/Hide all episodes player</button>
 
@@ -104,7 +105,8 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item"  onclick="toggleCommentBox()">View/Hide
 							Comments </a> <a class="dropdown-item"
-							href="/comment/new/${episode.id}">Create Comment</a>
+							href="/comment/new/${episode.id}">Create Comment</a><a class="dropdown-item"  onclick="toggleDesc()">View/Hide
+							Episode Details </a>
 
 					</div></li>
 			</ul>
@@ -113,27 +115,28 @@
 
 	<div>
 		<!-- episode info -->
-		<div class="container text-center mt-5 font">
+		<div id="epdescription"  class="container text-center mt-5 font">
 			${formattedEpisodeDate}
-			<h2>${episode.title}</h2>
+			<h2> <c:out  value="${episode.title}"></c:out></h2>
 
-			<div class="epdescription d-flex justify-content-center pagefont">
-				<p>${episode.description}</p>
+			<div  class="d-flex justify-content-center pagefont">
+				<h3>${episode.description}</h3>
+				<small><p onclick="toggleDesc()">Hide Details</p></small>
 			</div>
 		</div>
-
+			
 		<!-- all episodes player -->
 		
-		<div id='buzzsprout-large-player'></div>
+		<div id='buzzsprout-large-player' style="display: none"></div>
 		<script type='text/javascript' charset='utf-8'
 			src='https://www.buzzsprout.com/147064.js?container_id=buzzsprout-large-player&player=large'></script>
 	</div>
-
-	<div id="commentBox">
+		<!--  Comments -->
+	<div id="commentBox" style="display: none">
 		<div class="text-center">
-			<div class="table-wrapper-scroll-y my-custom-scrollbar pagefont">
+			<div class="table-wrapper-scroll-y my-custom-scrollbar pagefont rounded">
 
-				<table class="table table-striped mb-0">
+				<table class="table table-striped mb-0 ">
 				
 					<thead>
 						<tr>
@@ -144,13 +147,13 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach var="eachcomment" items="${episode.comments}">
+						<c:forEach var="eachcomment" items="${descComments}">
 							<tr>
 
-								<td>User: ${eachcomment.user.userName}</td>
-								<td><p>${eachcomment.content}</p></td>
-								<td><a href="${eachcomment.href}"
-										target="_blank"> ${eachcomment.label}</a></td>
+								<td>User: <c:out value="${eachcomment.user.userName}"></c:out></td>
+								<td><p><c:out value="${eachcomment.content}"></c:out></p></td>
+								<td><a href="<c:out value="${eachcomment.href}"></c:out>"
+										target="_blank"><c:out value="${eachcomment.label}"></c:out></a></td>
 								<td><c:if test="${user_id == eachcomment.user.id}">
 											<div class="col">
 												<form action="/comment/edit/${eachcomment.id}" method="get">
