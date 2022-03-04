@@ -17,6 +17,11 @@
 body {background-color: rgba(149,210,229,255);}
 
 
+
+.pagefont{
+font-family: 'Anton', sans-serif;
+}
+
 .background {
 	background: url("/resources/static/img/il_794xN.2348104648_7r0h.jpg");
 	background-repeat: no-repeat;
