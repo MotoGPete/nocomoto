@@ -59,6 +59,9 @@ public class EpisodeController {
 //*******************SHow One*******************
 	@GetMapping("/episodes/{id}")
 	public String episodeShow(@PathVariable("id") Long id, Model model, HttpSession session) {
+		if (session.getAttribute("user_id") == null) {
+			return "redirect:/";
+		}
 		Episode episode = episodeService.findEpisode(id);
 		model.addAttribute("episode", episode);
 		Comment comment = new Comment();
@@ -75,6 +78,9 @@ public class EpisodeController {
 		if (session.getAttribute("user_id") == null) {
 			return "redirect:/";
 		}
+		Long userID = (Long) session.getAttribute("user_id");
+		User user = userService.findUser(userID);
+		model.addAttribute("user", user);
 		Episode  episode = episodeService.findEpisode(id);
 		Comment comment = new Comment();
 		model.addAttribute("newComment", comment);
