@@ -50,18 +50,8 @@
 				<li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
 				<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
 				<li class="nav-item"><a class="nav-link" target="_blank" href="https://www.etsy.com/shop/TempusDeficit?ref=simple-shop-header-name&listing_id=682919777">Buy The Artwork</a></li>
-				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Play Episode</a>				
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="${episode.audio_url}" target="_blank">Play This episode in another window</a>
-							<button id="playerOn" class="dropdown-item" onclick="togglePlayer()">Load/Hide all episodes player</button>
-					</div>
-				</li>
-				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Comments</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item"  onclick="toggleCommentBox()">View/Hide Comments </a> 
-						<a class="dropdown-item" href="/comment/new/${episode.id}">Create Comment</a><a class="dropdown-item"  onclick="toggleDesc()">View/Hide	Episode Details </a>
-					</div>
-				</li>
+
+
 			</ul>
 		</div>
 	</nav>
