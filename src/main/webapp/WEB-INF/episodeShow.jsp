@@ -154,7 +154,7 @@
 								<td><p>${eachcomment.content}</p></td>
 								<td><a href="${eachcomment.href}"
 										target="_blank"> ${eachcomment.label}</a></td>
-								<td><c:if test="${user_id == eachcomment.user.id}">
+								<td><c:if test="${user_id == eachcomment.user.userId}">
 											<div class="col">
 												<form action="/comment/edit/${eachcomment.id}" method="get">
 													<input type="hidden"> <input type="submit"
