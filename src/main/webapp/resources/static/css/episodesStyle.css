@@ -17,13 +17,24 @@
 body {background-color: rgba(149,210,229,255);}
 
 
+#episodescroll {
+	height: auto;
+	width: 100%;
+	margin: -10;
+	padding: -10;
+}
+
+a {
+color: black;
+
+}
 
 .pagefont{
 font-family: 'Anton', sans-serif;
 }
 
 .background {
-	background: url("/resources/static/img/il_794xN.2348104648_7r0h.jpg");
+	background: url("/resources/static/img/tempus3.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	height: 1800px;
@@ -37,8 +48,16 @@ font-family: 'Anton', sans-serif;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	height: 600px;
+	height: 800px;
 	overflow: auto;
+	width:100%;
+}
+.table {
+	background-color:rgba(169,199,202,0.6);
+	height: auto;
+	width: 100%;
+	margin: -10;
+	padding: -10;
 }
 
 .table-wrapper-scroll-y {

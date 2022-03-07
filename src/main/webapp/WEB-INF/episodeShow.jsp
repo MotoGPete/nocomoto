@@ -116,23 +116,24 @@
 
 	<div>
 		<!-- episode info -->
-		<div class="container text-center mt-5 font">
+		<div id="epdescription"  class="container text-center mt-5 font">
 			${formattedEpisodeDate}
-			<h2>${episode.title}</h2>
+			<h2> <c:out  value="${episode.title}"></c:out></h2>
 
-			<div class="epdescription d-flex justify-content-center pagefont">
-				<p>${episode.description}</p>
+			<div  class="d-flex justify-content-center pagefont">
+				<h3>${episode.description}</h3>
+				<small><p onclick="toggleDesc()">Hide Details</p></small>
 			</div>
 		</div>
 
 		<!-- all episodes player -->
 		
-		<div id='buzzsprout-large-player'></div>
+		<div id='buzzsprout-large-player' style="display: none"></div>
 		<script type='text/javascript' charset='utf-8'
 			src='https://www.buzzsprout.com/147064.js?container_id=buzzsprout-large-player&player=large'></script>
 	</div>
 
-	<div id="commentBox">
+	<div id="commentBox" style="display: none">
 		<div class="text-center">
 			<div class="table-wrapper-scroll-y my-custom-scrollbar pagefont">
 

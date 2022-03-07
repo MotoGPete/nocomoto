@@ -22,11 +22,7 @@ font-family: 'Anton', sans-serif;
 	background-size: 100% auto;
 
 }
-.background2 {
-	background: url("/resources/static/img/filler.jpg");
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-}
+
 footer {
 text-align: center;
 background: rgba(0, 0, 0, 0.0)
@@ -36,6 +32,7 @@ background: rgba(0, 0, 0, 0.0)
 
 .table {
 	background-color:rgba(192,214,216,0.6);
+
 }
 
 a {
@@ -65,6 +62,10 @@ color: black;
 
 #commentBox {
     display: none;
+}
+
+#buzzsprout-large-player {
+	display: none;
 }
 
 

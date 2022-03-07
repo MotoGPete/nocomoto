@@ -22,7 +22,7 @@
 <div class="sidebar">
 <div><p class = "pagefont">Welcome Back ${userName}</p></div>
 
-<div>
+<div class="pagefont">
     <ul>
     <li class = "pagefont"><a href = "/episodes">Episodes</a></li>
     <li class = "pagefont"><a href = href="https://www.etsy.com/shop/TempusDeficit?ref=simple-shop-header-name&listing_id=682919777">Buy
@@ -36,13 +36,13 @@
 <div class="body-text">
 <br>
 <div id="favorites" class="text-center m-4">
-                       		<h4 class = "pagefont">Saved Episodes</h4>
+                       		<h4 class = "font">Saved Episodes</h4>
                        			<div class="table-wrapper-scroll-y my-custom-scrollbar">
                        				<table class="table table-info table-striped mb-0">
                        					<tbody>
                        					<tr>
-                       					<th class = "pagefont">Episode</th>
-                       					<th class = "pagefont">Description</th>
+                       					<th class = "font">Episode</th>
+                       					<th class = "font">Description</th>
                        					</tr>
                        						<c:forEach var="favorites" items="${favorites}">
                        							<tr>
