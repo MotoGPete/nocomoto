@@ -6,6 +6,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 <link rel="stylesheet" type="text/css"
@@ -14,26 +17,28 @@
 
 </head>
 <body class="container">
-	<div class="panel panel-login">
-			<div class="panel-heading">
-				<div class="row">
-					<div class="col-xs-6 text-right">
-						<button class="btn-lg">
-							<a href="#" class="active" id="login-form-link">Login Form</a>
-						</button>
+<div class="padding"></div>
+ <div class="logocontainer" style="border-radius: 10%"></div>
+ <hr>
+ <div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3 box">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="#" class="active" id="login-form-link">Login</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" id="register-form-link">Register</a>
+							</div>
+						</div>
+						<hr>
 					</div>
-					<div class="col-xs-6 text-left">
-						<button class="btn-lg mr-1150">
-							<a href="#" id="register-form-link">Register Form</a>
-						</button>
-					</div>
-				</div>
-				<hr>
-			</div>
-			<div class="panel-body" style="width:=75%">
-				<div class="row">
-					<div class="col-lg-12 ">
-						<form:form id="login-form" action="/login" method="post"
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form:form id="login-form" action="/login" method="post"
 							role="form" style="display: block;" modelAttribute="newLogin">
 							<div class="form-group">
 								<h1><label>Email:</label></h1>
@@ -56,7 +61,7 @@
 							</div>
 
 						</form:form>
-						<form:form id="register-form" action="/register" method="post"
+								<form:form id="register-form" action="/register" method="post"
 							role="form" style="display: none;" modelAttribute="newUser">
 							<div class="form-group">
 								<h1><label>User Name:</label></h1>
@@ -90,15 +95,16 @@
 								</div>
 							</div>
 						</form:form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+
+
 	
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<script
-    	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
