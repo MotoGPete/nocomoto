@@ -7,8 +7,8 @@
 @font-face {
 	font-family: NexaRust;
 	font-weight: bold;
-	src: url("/resources/static/fonts/NexaRustSlab-BlackShadow01.otf")
-		format("opentype");
+	src:  url('/resources/static/fonts/font.woff2') format('woff2'),  url('/resources/static/fonts/font.woff') format('woff');;
+	
 }
 
 .font {

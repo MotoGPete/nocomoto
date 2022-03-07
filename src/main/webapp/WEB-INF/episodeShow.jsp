@@ -13,6 +13,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!--
+/**
+* @license
+* MyFonts Webfont Build ID 119856
+*
+* The fonts listed in this notice are subject to the End User License
+* Agreement(s) entered into by the website owner. All other parties are
+* explicitly restricted from using the Licensed Webfonts(s).
+*
+* You may obtain a valid license from one of MyFonts official sites.
+* http://www.fonts.com
+* http://www.myfonts.com
+* http://www.linotype.com
+*
+*/
+-->
 <script type="text/javascript" src="/resources/static/js/episodeShow.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -1,0 +1,28 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4432429, 2022-03-07T16:48:59-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: NexaRustSans-BlackShadow3 by Fontfabric
+ * URL: https://www.myfonts.com/fonts/font-fabric/nexa-rust/sans-black-shadow-03/
+ * Copyright: Copyright &amp;#x00A9; 2014 by Fontfabric. All rights reserved.
+ * 
+ * 
+ * 
+ * © 2022 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/43a22d");
+  
+@font-face {
+  font-family: "NexaRustSans-BlackShadow3";
+  src: url('webFonts/NexaRustSansBlackShadow3/font.woff2') format('woff2'), url('webFonts/NexaRustSansBlackShadow3/font.woff') format('woff');
+}
+
