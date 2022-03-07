@@ -14,11 +14,13 @@ font-family: 'Anton', sans-serif;
 .font {
 	font-family: NexaRust;
 }
+body{
 
+}
 
 .sidebar {
 height: 100%;
-width: 200px;
+width: 250px;
 position: absolute;
 left: 0;
 top: 0;
@@ -31,19 +33,43 @@ text-align: center;
 }
 
 .sidebar div {
+font-size: 40px;
 padding: 8px;
 font-size: 24px;
 display: block;
 }
 
 .body-text {
-margin-left: 150px;
-font-size: 32px;
+background-image: url("/resources/static/img/motoflip.jpg");
+height: 100%;
+margin-left: 250px;
+
+top: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
-.list{
-font-size: 32px;
+#comments{
+
 align: right;
 margin-left: 250px;
 padding-top: 100px;
+
+}
+#favorites{
+
+
+align: right;
+margin-left: 250px;
+padding-top: 100px;
+
+
+}
+.my-custom-scrollbar {
+position: relative;
+height: 400px;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
 }

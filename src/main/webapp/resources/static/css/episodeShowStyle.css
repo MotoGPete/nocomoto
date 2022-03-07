@@ -22,28 +22,49 @@ font-family: 'Anton', sans-serif;
 	background-size: 100% auto;
 
 }
+.background2 {
+	background: url("/resources/static/img/filler.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
 footer {
 text-align: center;
 background: rgba(0, 0, 0, 0.0)
 }
 
+
+
+.table {
+	background-color:rgba(192,214,216,0.6);
+}
+
 a {
 color: black;
+
 }
 
+.my-custom-scrollbar {
+	border: none;
+	text-align: center;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	height: 600px;
+	overflow: auto;
+}
 
-
-.epdescription {
-	
+#epdescription {
+	background-color:rgba(192,214,216,0.6);
 	height: auto;
 	width: 100%;
+	margin: -10;
+	padding: -10;
 }
 
-#buzzsprout-large-player {
-    display: none;
-}
 
 #commentBox {
     display: none;
 }
+
 

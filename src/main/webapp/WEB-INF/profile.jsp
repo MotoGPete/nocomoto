@@ -20,46 +20,69 @@
 <body>
 
 <div class="sidebar">
-<div><p>Welcome Back ${userName}</p></div>
+<div><p class = "pagefont">Welcome Back ${userName}</p></div>
 
 <div>
     <ul>
-    <li><a href = "/episodes">Episodes</a></li>
-    <li><a href = href="https://www.etsy.com/shop/TempusDeficit?ref=simple-shop-header-name&listing_id=682919777">Buy
+    <li class = "pagefont"><a href = "/episodes">Episodes</a></li>
+    <li class = "pagefont"><a href = href="https://www.etsy.com/shop/TempusDeficit?ref=simple-shop-header-name&listing_id=682919777">Buy
                   						the Artwork</a></li>
-    <li><a href="/logout">Logout</a></li>
+    <li class = "pagefont"><a href="/logout">Logout</a></li>
 
     </ul>
 </div>
 </div>
 
 <div class="body-text">
-<div class = "list">
-<table class="table table-secondary table-striped">
-<tr>
-<th>The dumb shit you post: <th></tr>
-<tr><td>Omg Pete is so cool, I wish I was a pokemon master too!</td></tr>
-<tr><td>Some other content</td></tr>
-<tr><td>Three wheeled bikes are tricycles and I will fight anyone on this subject</td></tr>
-
-</table>
-
-</div>
 <br>
-<div class = "list">
-<table class="table table-secondary table-striped">
-<tr><th>I should make these accordion menus with episode descriptions</th></tr>
+<div id="favorites" class="text-center m-4">
+                       		<h4 class = "pagefont">Saved Episodes</h4>
+                       			<div class="table-wrapper-scroll-y my-custom-scrollbar">
+                       				<table class="table table-info table-striped mb-0">
+                       					<tbody>
+                       					<tr>
+                       					<th class = "pagefont">Episode</th>
+                       					<th class = "pagefont">Description</th>
+                       					</tr>
+                       						<c:forEach var="favorites" items="${favorites}">
+                       							<tr>
+                                                    <td class = "pagefont">
+                       										<a href="/episodes/${favorites.id}">${favorites.title}</a>
+                       								</td>
+                       										<td>${favorites.description}</td>
+                       							</tr>
+                       						</c:forEach>
+                       					</tbody>
+                       				</table>
+                       			</div>
+<br>
 
-<tr><td>Bikes!</td></tr>
-<tr><td>More bikes!</td></tr>
-<tr><td>Scooters:  Smaller bikes? </td></tr>
+<div id="comments" class="text-center m-4">
+		<h4 class = "pagefont">Comments</h4>
+			<div class="table-wrapper-scroll-y my-custom-scrollbar">
+				<table class="table table-info table-striped mb-0">
+					<tbody>
+					<tr>
+					<th class = "pagefont">What you said</th>
+					<th class = "pagefont">Where you said it</th>
+					</tr>
+						<c:forEach var="comments" items="${comments}">
+							<tr>
+								<td>${comments.content}:</td>
+
+								<td class = "pagefont">
+
+										<a href="/episodes/${comments.episode.id}">${comments.episode.title}</a>
+
+								</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
 
 
-
-
-</table>
-</div>
-</div>
 <script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
