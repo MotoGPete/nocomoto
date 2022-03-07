@@ -40,7 +40,7 @@ display: block;
 }
 
 .body-text {
-background-image: url("/resources/static/img/motoflip.jpg");
+background-image: url("/resources/static/img/il_794xN.2348104648_7r0h.jpg");
 height: 100%;
 margin-left: 250px;
 
@@ -53,7 +53,7 @@ top: 0px;
 
 align: right;
 margin-left: 250px;
-padding-top: 100px;
+padding-top: 75px;
 
 }
 #favorites{
@@ -61,13 +61,13 @@ padding-top: 100px;
 
 align: right;
 margin-left: 250px;
-padding-top: 100px;
+padding-top: 50px;
 
 
 }
 .my-custom-scrollbar {
 position: relative;
-height: 400px;
+height: 300px;
 overflow: auto;
 }
 .table-wrapper-scroll-y {
