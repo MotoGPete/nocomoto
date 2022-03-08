@@ -35,7 +35,7 @@
 
 <div class="body-text">
 <br>
-<div id="favorites" class="text-center m-4">
+            <div id="favorites" class="text-center m-4">
                        		<h4 class = "font">Saved Episodes</h4>
                        			<div class="table-wrapper-scroll-y my-custom-scrollbar">
                        				<table class="table table-info table-striped mb-0">
@@ -55,34 +55,31 @@
                        					</tbody>
                        				</table>
                        			</div>
+            </div>
 <br>
 
-<div id="comments" class="text-center m-4">
-		<h4 class = "pagefont">Comments</h4>
-			<div class="table-wrapper-scroll-y my-custom-scrollbar">
-				<table class="table table-info table-striped mb-0">
-					<tbody>
-					<tr>
-					<th class = "pagefont">What you said</th>
-					<th class = "pagefont">Where you said it</th>
-					</tr>
-						<c:forEach var="comments" items="${comments}">
-							<tr>
-								<td>${comments.content}:</td>
+                            <div id="comments" class="text-center m-4">
+		                        <h4 class = "pagefont">Comments</h4>
+		                        	<div class="table-wrapper-scroll-y my-custom-scrollbar">
+				                        <table class="table table-info table-striped mb-0">
+					                    <tbody>
+					                        <tr>
+					                        <th class = "pagefont">What you said</th>
+					                        <th class = "pagefont">Where you said it</th>
+					                        </tr>
+						                <c:forEach var="comments" items="${comments}">
+							                <tr>
+								            <td>${comments.content}:</td>
+								            <td class = "pagefont">
+										    <a href="/episodes/${comments.episode.id}">${comments.episode.title}</a></td>
+							                </tr>
+						                </c:forEach>
+					                    </tbody>
+				                        </table>
+		                	           </div>
+		                    </div>
 
-								<td class = "pagefont">
-
-										<a href="/episodes/${comments.episode.id}">${comments.episode.title}</a>
-
-								</td>
-							</tr>
-						</c:forEach>
-					</tbody>
-				</table>
-			</div>
-		</div>
-
-
+</div>
 <script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
