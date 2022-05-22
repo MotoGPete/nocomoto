@@ -18,11 +18,13 @@
 </head>
 <body class="container">
 <div class="padding"></div>
- <div class="logocontainer" style="border-radius: 10%"></div>
+ <div class="logo">
+ <img src="static/img/noco mot logo lg.jpg" alt="Logo" class="logo">
+ </div>
  <hr>
- <div class="container">
-    	<div class="row">
-			<div class="col-md-6 col-md-offset-3 box">
+ <div class="logincontainer">
+    	<div class="loginrow">
+
 				<div class="panel panel-login">
 					<div class="panel-heading">
 						<div class="row">
@@ -99,7 +101,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+
 		</div>
 	</div>
 

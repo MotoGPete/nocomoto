@@ -1,26 +1,46 @@
 body{
-	width: 100%;
-	height: auto;
+    min-width: 100%;
 	background-color:rgb(238,0,0);
 	background: url("/resources/static/img/tempus3.jpg");
 	background-repeat: no-repeat;
+	background-size:cover;
+
 }
+
+
 
 .padding{
 	height: 20px;
 }
 
-.logocontainer {
-	width: auto;
+.logo {
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    width: auto;
 	height: 700px;
-	background: url("/resources/static/img/noco mot logo lg.jpg");
-	background-repeat: no-repeat;
-	background-size: 100% ;
-	margin-top: 10;
+}
+img{
+
+    width: auto;
+    height: 100%;
+    border-radius: 10%;
+
 }
 
 .box {
 	width: 100%;
+}
+.logincontainer{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.loginrow{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%
 }
 .panel-login {
 	border-color: #ccc;
