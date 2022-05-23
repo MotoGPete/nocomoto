@@ -20,7 +20,6 @@
 <div class="padding"></div>
  <div class="logocontainer" style="border-radius: 10%"></div>
  <hr>
- <div class="container">
     	<div class="row">
 			<div class="col-md-6 col-md-offset-3 box">
 				<div class="panel panel-login">
@@ -101,17 +100,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-
-	
-
-
-
     <script type="text/javascript" src="/resources/static/js/index.js"></script>
-
-
 	</body>
-
 </html>
 
